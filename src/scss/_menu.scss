@@ -1,0 +1,22 @@
+.menu {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    @media (max-width: $size-tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+  }
+  &__image {
+    width: 100%;
+    @media (max-width: $size-tablet) {
+      max-width: 330px;
+    }
+  }
+}

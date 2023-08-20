@@ -18,10 +18,7 @@ module.exports = {
       template: "./src/core.html",
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        {from: "src/assets", to: "assets"},
-        {from: "src/data", to: "data"},
-      ],
+      patterns: [{from: "src/assets", to: "assets"}],
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
@@ -53,13 +50,19 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
+          "style-loader",
           "css-loader",
-          "postcss-loader",
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              // configure Sass options here
+            },
+          },
         ],
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

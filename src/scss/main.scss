@@ -1,23 +1,41 @@
-$body-color: blue;
-
 @import "fonts";
+@import "variables";
+@import "mixins";
+@import "buttons";
 
 body {
-  background-color: #fff;
-  font-size: 16px;
-  font-weight: 400;
+  background-color: $color-light;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
   font-style: normal;
-  font-family: "Roboto", sans-serif;
-  color: #000000;
+  font-family: $font-primary;
+  color: $color-primary;
   margin: 0;
-  padding-top: 100px;
   position: relative;
-  transition: 0.5s ease;
-
+}
 .container {
-  max-width: 1240px;
+  max-width: $size-desktop;
   box-sizing: border-box;
   padding: 0 5px;
   margin: 0 auto;
+  @media (max-width: $size-laptop) {
+    padding: 0 15px;
+  }
 }
-@import "normalize.css/normalize";
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.logo-wrapper {
+  max-width: 269px;
+  @media (max-width: $size-laptop) {
+    max-width: 150px;
+  }
+}
+
+@import "header";
+@import "navigation";
+@import "phone-link";
+@import "mobile-menu";
+@import "socials";

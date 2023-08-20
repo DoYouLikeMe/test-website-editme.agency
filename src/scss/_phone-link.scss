@@ -1,0 +1,10 @@
+.header-phone-link {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  text-decoration: none;
+  color: $color-light;
+  & svg {
+    color: $color-icon;
+  }
+}

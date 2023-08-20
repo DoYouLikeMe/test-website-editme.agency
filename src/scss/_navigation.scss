@@ -1,0 +1,19 @@
+.navigation-main {
+  @media (max-width: $size-tablet) {
+    display: none;
+  }
+  &__list {
+    @include lists-reset;
+    gap: 45px;
+    @media (max-width: $size-laptop) {
+      gap: 15px;
+    }
+  }
+  &__link {
+    color: $color-light;
+    text-decoration: none;
+    &_active {
+      font-weight: 500;
+    }
+  }
+}

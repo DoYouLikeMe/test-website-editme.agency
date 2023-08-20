@@ -1,12 +1,6 @@
-@mixin round-button {
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  text-align: center;
-  background-color: #efc84a;
-  font-size: 30px;
-  color: #fff;
-  transition: 0.5s ease-in;
+@mixin lists-reset {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
 }

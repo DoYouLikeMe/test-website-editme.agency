@@ -56,6 +56,12 @@
     }
     &:nth-child(even)::after {
       display: none;
+      @media (max-width: $size-mobile) {
+        display: block;
+      }
+    }
+    &:last-child::after {
+      display: none;
     }
   }
 }

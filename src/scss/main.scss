@@ -27,6 +27,11 @@ body {
   max-width: 100%;
 }
 
+.section-dark {
+  background-color: $color-blue;
+  color: $color-light;
+}
+
 .logo-wrapper {
   max-width: 269px;
   @media (max-width: $size-laptop) {
@@ -41,3 +46,4 @@ body {
 @import "socials";
 @import "menu";
 @import "menu-schedule";
+@import "swiper";

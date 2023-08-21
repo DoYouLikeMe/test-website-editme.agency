@@ -11,7 +11,11 @@
   }
   &__link {
     color: $color-light;
+    transition: 0.5s ease;
     text-decoration: none;
+    &:hover {
+      color: darken($color-light, 50%);
+    }
     &_active {
       font-weight: 500;
     }

@@ -13,5 +13,11 @@
     text-decoration: none;
     box-sizing: border-box;
     color: $color-light;
+    transition: 0.5s ease-out;
+    &:hover {
+      border-color: $color-icon;
+      color: $color-icon;
+      transform: scale(110%);
+    }
   }
 }

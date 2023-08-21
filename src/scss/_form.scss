@@ -1,0 +1,29 @@
+.form {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 19px;
+    margin-bottom: 20px;
+    @media (max-width: $size-mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    border-radius: 0;
+    padding: 28px 16px;
+    height: 100%;
+    outline: none;
+    line-height: 150%;
+    border: 1px solid $color-border;
+    ::placeholder {
+      color: $color-dark;
+    }
+  }
+  &__message {
+    grid-column: span 2;
+  }
+}

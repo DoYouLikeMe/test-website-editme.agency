@@ -15,15 +15,7 @@
   z-index: 10;
   &::after,
   &::before {
-    transition: 0.5s ease-in-out;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: $color-icon;
-    content: "";
-    left: 0;
-    right: 0;
-    position: absolute;
+    @include two-bars-icon;
   }
   &::after {
     top: 50%;
@@ -39,19 +31,7 @@
     border-bottom: none;
     border-top: 0;
 
-    &::after,
-    &::before {
-      top: 50%;
-      margin-top: 0;
-      margin-bottom: 0;
-      bottom: 0;
-    }
-    &::after {
-      transform: rotate(45deg);
-    }
-    &::before {
-      transform: rotate(-45deg);
-    }
+    @include close-icon;
   }
 
   @media (max-width: $size-tablet) {
@@ -76,6 +56,7 @@
   z-index: 5;
   transform: translateX(100%);
   justify-content: center;
+  transition: transform 0.5s ease-in-out;
   &_active {
     transform: translateX(0);
   }

@@ -3,7 +3,11 @@
   gap: 11px;
   align-items: center;
   text-decoration: none;
+  transition: 0.5s ease-in-out;
   color: $color-light;
+  &:hover {
+    color: darken($color-light, 50%);
+  }
   & svg {
     color: $color-icon;
   }
